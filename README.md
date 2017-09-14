@@ -13,10 +13,10 @@ import scipy.io as sci
 fs = 16000
 
 # Determination of the signal length in seconds.
-numSec = 10
+num_sec = 10
 
 # Creation of a time vector.
-t = np.arange(0, numSec - 1 / fs, 1 / fs)
+t = np.arange(0, num_sec - 1 / fs, 1 / fs)
 
 # Magnitude in μA.
 amp = 1000
