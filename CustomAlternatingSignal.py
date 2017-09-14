@@ -6,6 +6,8 @@
 Script for creating arbitrary data signals consisted of repetitive pulses based on three different waveform shapes,
 ie. square, sawtooth and sinusoidal. You can specify signal duration, number of pulses in signal, duration of single
 pulses, their amplitude, signal offset amplitude, as well as pre and post time duration, when non pulse occur.
+
+TODO: Enclose script functionality in one function.
 """
 
 import numpy as np
