@@ -7,7 +7,7 @@ A MATLAB file that is suitable for the conversion into \*.bfs file has to contai
 
 ```python
 import numpy as np
-import scipy.io as sci
+import scipy.io as sio
 
 # Determination of the sample rate.
 fs = 16000
@@ -31,5 +31,5 @@ off = 500
 data = np.sin(2 * np.pi * freq * t) * amp + off
 
 # Saving in MAT-File format.
-sci.savemat("Signal.mat", mdict={"data": data, "fs": fs})
+sio.savemat("Signal.mat", mdict={"data": data, "fs": fs})
 ```
