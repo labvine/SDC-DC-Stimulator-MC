@@ -8,6 +8,7 @@ ie. square, sawtooth and sinusoidal. You can specify signal duration, number of 
 pulses, their amplitude, signal offset amplitude, as well as pre and post time duration, when non pulse occur.
 
 TODO: Enclose script functionality in one function.
+TODO: Enclose script and its project dependencies in one dedicated folder.
 """
 
 import numpy as np
