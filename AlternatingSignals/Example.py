@@ -2,17 +2,17 @@
 # Contact: piotr.dzwiniel@gmail.com.
 # This file is a part of SDC-DC-Stimulator-MC project.
 
-from CustomAlternatingSignal import CustomAlternatingSignal as cas
+import AlternatingSignals.CustomAlternatingSignal as cas
 
 # Define parameters.
 samp_rate = 16000
 stim_shape = "sinusoidal"
 first_peak_pol = "positive"
-freq = 0.1
+freq = 1.0
 amp = 1000
 off_amp = 0
 sig_dur = 10.0
-pulse_dur = 0.1
+pulse_dur = 0.5
 pre_post_dur = [1.0, 1.0]
 save_mat = (False, "Signal.mat")
 preview_sig = True

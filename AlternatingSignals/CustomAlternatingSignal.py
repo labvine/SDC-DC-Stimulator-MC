@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import scipy.io as sio
 
-from CustomAlternatingSignal import OnePeriodSignals as ops
+import AlternatingSignals.OnePeriodSignals as ops
 
 
 def custom_alternating_signal(samp_rate=16000, stim_shape="sinusoidal", first_peak_pol="positive", freq=0.1, amp=1000,
@@ -67,22 +67,22 @@ def custom_alternating_signal(samp_rate=16000, stim_shape="sinusoidal", first_pe
     you can use this function as follows.
 
     Example 1 :
-    from CustomAlternatingSignal import CustomAlternatingSignal as cas
+    import AlternatingSignals.CustomAlternatingSignal as cas
 
     data_signal = cas.custom_alternating_signal()
 
     Example 2 :
-    from CustomAlternatingSignal import CustomAlternatingSignal as cas
+    import AlternatingSignals.CustomAlternatingSignal as cas
 
     # Define parameters.
     samp_rate = 16000
     stim_shape = "sinusoidal"
     first_peak_pol = "positive"
-    freq = 0.1
+    freq = 1.0
     amp = 1000
     off_amp = 0
     sig_dur = 10.0
-    pulse_dur = 0.1
+    pulse_dur = 0.5
     pre_post_dur = [1.0, 1.0]
     save_mat = (False, "Signal.mat")
     preview_sig = True
