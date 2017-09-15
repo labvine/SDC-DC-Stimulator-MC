@@ -63,4 +63,5 @@ Preview of the `data_signal` vector:
 <img src="https://github.com/labvine/SDC-DC-Stimulator-MC/blob/master/AlternatingSignals/Fig1.png" width="60%">
 
 Author: Piotr Dzwiniel
+
 Contact: piotr.dzwiniel@gmail.com
