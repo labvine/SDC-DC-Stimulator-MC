@@ -122,7 +122,7 @@ def custom_alternating_signal(samp_rate=16000, stim_shape="sinusoidal", first_pe
         i = 0
         while i < tot:
             trial = np.zeros(samp_rate * sig_dur / tot)
-            trial[0:pulse_dur * samp_rate] = ops.square_pulse(samp_rate, pulse_dur, amp, first_peak_polarity=first_peak_pol)
+            trial[0:pulse_dur * samp_rate] = ops.square_pulse(samp_rate, pulse_dur, amp, first_peak_pol=first_peak_pol)
             data_signal.extend(trial)
             i += 1
         data_signal = pre + data_signal + post
@@ -133,7 +133,7 @@ def custom_alternating_signal(samp_rate=16000, stim_shape="sinusoidal", first_pe
         i = 0
         while i < tot:
             trial = np.zeros(samp_rate * sig_dur / tot)
-            trial[0:pulse_dur * samp_rate] = ops.sawtooth_pulse(samp_rate, pulse_dur, amp, first_peak_polarity=first_peak_pol)
+            trial[0:pulse_dur * samp_rate] = ops.sawtooth_pulse(samp_rate, pulse_dur, amp, first_peak_pol=first_peak_pol)
             data_signal.extend(trial)
             i += 1
         data_signal = pre + data_signal + post
@@ -144,7 +144,7 @@ def custom_alternating_signal(samp_rate=16000, stim_shape="sinusoidal", first_pe
         i = 0
         while i < tot:
             trial = np.zeros(samp_rate * sig_dur / tot)
-            trial[0:pulse_dur * samp_rate] = ops.sin_pulse(samp_rate, pulse_dur, amp, first_peak_polarity=first_peak_pol)
+            trial[0:pulse_dur * samp_rate] = ops.sin_pulse(samp_rate, pulse_dur, amp, first_peak_pol=first_peak_pol)
             data_signal.extend(trial)
             i += 1
         data_signal = pre + data_signal + post

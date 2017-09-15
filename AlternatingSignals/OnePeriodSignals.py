@@ -6,61 +6,97 @@ import numpy as np
 from scipy import signal as sig
 
 
-def square_pulse(sr, dur, amp, first_peak_polarity="positive"):
+def square_pulse(samp_rate, pulse_dur, amp, first_peak_pol="positive"):
     """
-    :param sr: sampling rate
-    :param dur: duration in seconds
-    :param amp: amplitude in μA
-    :param first_peak_polarity: "positive" or "negative"
-    :return: square pulse
+    Function for creating a specific one period squarewave pulse.
+
+    Parameters
+    ----------
+    samp_rate : int
+        Sampling rate of the pulse.
+    pulse_dur : float
+        Pulse duration in seconds.
+    amp : int
+        Pulse amplitude in μA.
+    first_peak_pol : ["positive", "negative"]
+        Polarity of the first pulse hillock. Default value is "positive".
+
+    Returns
+    -------
+    pulse : ndarray
+        Pulse in a form of one-dimmensional ndarray.
     """
-    t = np.arange(0, dur, 1.0 / sr)
-    freq = 1.0 / dur
-    s = sig.square(2 * np.pi * freq * t) * (amp / 2)
-    if first_peak_polarity == "positive":
+    t = np.arange(0, pulse_dur, 1.0 / samp_rate)
+    freq = 1.0 / pulse_dur
+    pulse = sig.square(2 * np.pi * freq * t) * (amp / 2)
+    if first_peak_pol == "positive":
         pass
-    elif first_peak_polarity == "negative":
-        s *= -1
+    elif first_peak_pol == "negative":
+        pulse *= -1
     else:
-        raise ValueError("Invalid value of the first_peak_polarity argument. Use \"positive\" or \"negative\".")
-    return s
+        raise ValueError("Invalid value of the first_peak_pol argument. Use \"positive\" or \"negative\".")
+    return pulse
 
 
-def sawtooth_pulse(sr, dur, amp, first_peak_polarity="positive"):
+def sawtooth_pulse(samp_rate, pulse_dur, amp, first_peak_pol="positive"):
     """
-    :param sr: sampling rate
-    :param dur: duration in seconds
-    :param amp: amplitude in μA
-    :param first_peak_polarity: "positive" or "negative"
-    :return: sawtooth pulse
+    Function for creating a specific one period sawtooth pulse.
+
+    Parameters
+    ----------
+    samp_rate : int
+        Sampling rate of the pulse.
+    pulse_dur : float
+        Pulse duration in seconds.
+    amp : int
+        Pulse amplitude in μA.
+    first_peak_pol : ["positive", "negative"]
+        Polarity of the first pulse hillock. Default value is "positive".
+
+    Returns
+    -------
+    pulse : ndarray
+        Pulse in a form of one-dimmensional ndarray.
     """
-    t = np.arange(0, dur, 1.0 / sr)
-    freq = 1.0 / dur
-    s = sig.sawtooth(2 * np.pi * freq * t) * (amp / 2)
-    if first_peak_polarity == "positive":
+    t = np.arange(0, pulse_dur, 1.0 / samp_rate)
+    freq = 1.0 / pulse_dur
+    pulse = sig.sawtooth(2 * np.pi * freq * t) * (amp / 2)
+    if first_peak_pol == "positive":
         pass
-    elif first_peak_polarity == "negative":
-        s *= -1
+    elif first_peak_pol == "negative":
+        pulse *= -1
     else:
-        raise ValueError("Invalid value of the first_peak_polarity argument. Use \"positive\" or \"negative\".")
-    return s
+        raise ValueError("Invalid value of the first_peak_pol argument. Use \"positive\" or \"negative\".")
+    return pulse
 
 
-def sin_pulse(sr, dur, amp, first_peak_polarity="positive"):
+def sin_pulse(samp_rate, pulse_dur, amp, first_peak_pol="positive"):
     """
-    :param sr: sampling rate
-    :param dur: duration in seconds
-    :param amp: amplitude in μA
-    :param first_peak_polarity: "positive" or "negative"
-    :return: sinusoidal pulse
+    Function for creating a specific one period sinusoidal pulse.
+
+    Parameters
+    ----------
+    samp_rate : int
+        Sampling rate of the pulse.
+    pulse_dur : float
+        Pulse duration in seconds.
+    amp : int
+        Pulse amplitude in μA.
+    first_peak_pol : ["positive", "negative"]
+        Polarity of the first pulse hillock. Default value is "positive".
+
+    Returns
+    -------
+    pulse : ndarray
+        Pulse in a form of one-dimmensional ndarray.
     """
-    t = np.arange(0, dur, 1.0 / sr)
-    freq = 1.0 / dur
-    s = np.sin(2 * np.pi * freq * t) * (amp / 2)
-    if first_peak_polarity == "positive":
+    t = np.arange(0, pulse_dur, 1.0 / samp_rate)
+    freq = 1.0 / pulse_dur
+    pulse = np.sin(2 * np.pi * freq * t) * (amp / 2)
+    if first_peak_pol == "positive":
         pass
-    elif first_peak_polarity == "negative":
-        s *= -1
+    elif first_peak_pol == "negative":
+        pulse *= -1
     else:
-        raise ValueError("Invalid value of the first_peak_polarity argument. Use \"positive\" or \"negative\".")
-    return s
+        raise ValueError("Invalid value of the first_peak_pol argument. Use \"positive\" or \"negative\".")
+    return pulse
