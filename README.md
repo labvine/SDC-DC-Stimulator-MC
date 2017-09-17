@@ -62,6 +62,8 @@ Preview of the `data_signal` vector:
 
 <img src="https://github.com/labvine/SDC-DC-Stimulator-MC/blob/master/AlternatingSignals/Fig1.png" width="60%">
 
+In order to use `custom_alternating_signal` function, you need to have scripts <a href="https://github.com/labvine/SDC-DC-Stimulator-MC/blob/master/AlternatingSignals/CustomAlternatingSignal.py">CustomAlternatingSignal.py</a> and <a href="https://github.com/labvine/SDC-DC-Stimulator-MC/blob/master/AlternatingSignals/OnePeriodSignals.py">OnePeriodSignals.py</a> in the same folder, or ensure, that script <a href="https://github.com/labvine/SDC-DC-Stimulator-MC/blob/master/AlternatingSignals/CustomAlternatingSignal.py">CustomAlternatingSignal.py</a> properly import <a href="https://github.com/labvine/SDC-DC-Stimulator-MC/blob/master/AlternatingSignals/OnePeriodSignals.py">OnePeriodSignals.py</a> script. You can find both scripts in <a href="https://github.com/labvine/SDC-DC-Stimulator-MC/tree/master/AlternatingSignals">AlternatingSignals</a> folder.
+
 Author: Piotr Dzwiniel
 
 Contact: piotr.dzwiniel@gmail.com
